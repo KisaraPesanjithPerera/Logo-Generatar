@@ -75,7 +75,7 @@ async def start(client,message):
 @logo.on_message(filters.command("logo"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
-    photo = get(f"https://api.single-developers.software/logo?name={text}").history[1].url
+    photo = get(f"https://api.single-developers.software/logo?name={text}")
     await message.reply_chat_action("upload_photo")
     await logo.send_photo(message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
@@ -94,7 +94,7 @@ async def on_off_antiarab(_, message: Message):
 @logo.on_message(filters.command("logohq"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
-    photo = get(f"https://api.single-developers.software/logohq?name={text}").history[1].url
+    photo = get(f"https://api.single-developers.software/logohq?name={text}")
     await message.reply_chat_action("upload_photo")
     await logo.send_photo(message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
@@ -114,7 +114,7 @@ async def on_off_antiarab(_, message: Message):
 @logo.on_message(filters.command("wall"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
-    photo = get(f"https://api.single-developers.software/wallpaper?search={text}").history[1].url
+    photo = get(f"https://api.single-developers.software/wallpaper?search={text}")
     await message.reply_chat_action("upload_photo")
     await logo.send_photo(message.chat.id, photo=photo, caption=caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
@@ -132,5 +132,5 @@ async def on_off_antiarab(_, message: Message):
 logo.run()
 
 app.start()
-LOGGER.info("SL Bot Developers 🇱🇰 corporation ©")
+LOGGER.info("Anonymous Bots Infinity")
 idle()
